@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwmyo34hsmtx7"]
+
+[ext_resource type="Texture2D" uid="uid://cd3bd052kosyv" path="res://art/player/tile_0097.png" id="1_a5ntm"]
+[ext_resource type="Script" path="res://scenes/player/fred.gd" id="1_asccn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x40bp"]
+radius = 5.0
+
+[node name="Fred" type="CharacterBody2D"]
+script = ExtResource("1_asccn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_a5ntm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_x40bp")
